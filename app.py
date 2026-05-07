@@ -272,8 +272,16 @@ def scientist_detail(name):
 
     return render_template_string(detail_template, scientist=scientist)
 
+from flask import Flask
+import os
+
+app = Flask(__name__)
+
+@app.route("/")
+def home():
+    return "Site çalışıyor!"
+
 if __name__ == "__main__":
-    import os
     port = int(os.environ.get("PORT", 10000))
     app.run(host="0.0.0.0", port=port)
 
