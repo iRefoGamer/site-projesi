@@ -272,10 +272,6 @@ def scientist_detail(name):
 
     return render_template_string(detail_template, scientist=scientist)
 
-from flask import Flask
-import os
-
-app = Flask(__name__)
 
 @app.route("/")
 def home():
