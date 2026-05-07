@@ -273,4 +273,8 @@ def scientist_detail(name):
     return render_template_string(detail_template, scientist=scientist)
 
 if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=10000)
+    import os
+    port = int(os.environ.get("PORT", 10000))
+    app.run(host="0.0.0.0", port=port)
+
+
